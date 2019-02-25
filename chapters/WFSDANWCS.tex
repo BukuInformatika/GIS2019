@@ -32,3 +32,13 @@ Sebuah web mapping server yang dapat mengembalikan data geografis aktual yang te
 \caption{menunjukkan bagaimana WFS mengubah permintaan menjadi respons}
 \label{labelgambar1}
 \end{figure}
+
+Operasi dasar dari WFS antara lain adalah GetCapabilities, DescribeFeatureType dan GetFeature. Operasi yang lebih kompleks tersedia dalam layanan WFS-T (Web Feature Service – Transactional) yang memungkinkan pengguna untuk membuat (menyisipkan), menghapus, memperbarui dan mengunci instance fitur, serta fitur query, Sehingga transaksi dapat disimpan dengan benar dalam datastore (misalnya, SQL RDBMS), semantik transaksi diterapkan.
+
+Tidak seperti OGC Web Map Service (WMS), yang menampilkan gambar peta, layanan WFS menampilkan fitur sebenarnya dengan geometri dan data atribut yang dapat digunakan dalam semua jenis analisis geospasial. Layanan WFS juga mendukung filter yang memungkinkan pengguna untuk melakukan query spasial dan pengaturan data atribut.
+
+Layanan WFS menggunakan Geography Markup Language (GML) untuk menyandikan data fitur. Adapun GML ialah cara untuk merepresentasikan informasi geografis menggunakan XML (Extensible Markup Language) \cite{adityapeluang}.
+
+Web Feature Service merupakan suatu layanan publikasi data geospasial pada tingkat fitur data spasial melalui media web. Disamping penyajian data spasial melalui gambar yang dilakukan oleh WMS, pengguna dapat mendapatkan informasi data geospasial hingga ke lever fitur yaitu baik geometri maupun data atributnya. Spesifikasi OGC untuk WFS menggunakan teknologi Extensible Markup Language dan protocol Hyper Text Transfer Protocol sebagai media penyampaiannya.
+
+
