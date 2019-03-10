@@ -1,7 +1,17 @@
 \section{TIPE TIPE DATA GEOPASIAL}
-DATA RASTER DAN VEKTOR
+\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.75\textwidth]{pictures/gis.jpg}
+		\caption{Contoh gambar GIS}
+		\label{labelgambar1}
+		\end{figure}	
 \subsection{Pembahasan}
-Data Geospasial adalah data yang memuat lokasi geografis, dimensi atau ukuran, yang mana semua nya terdapat pada permukaan bumi. Data spasial SIG mempunyai dua bagian penting yang membuatnya berbeda dari data lain, yaitu informasi lokasi dan informasi atribut. Data spasial sistem informasi geografis yang berisi informasi lokasi (informasi spasial) contohnya adalah informasi lintang dan bujur, termasuk diantaranya informasi datum dan proyeksi. Contoh lain dari informasi spasial yang bisa digunakan untuk mengidentifikasikan lokasi misalnya adalah Kode Pos. Sedangkan Informasi Atribut (deskriptif) biasa disebut juga dengan informasi non-spasial. Suatu lokalitas bisa mempunyai beberapa atribut atau properti yang berkaitan dengannya; contohnya jenis vegetasi, populasi, pendapatan per tahun, dan lain-lain.\cite{prasetyo2018estimasi}Data geospasial dibagi mejadi dua tipe jenis, diantaranya:
+
+Data Geospasial adalah data yang memuat lokasi geografis, dimensi atau ukuran, yang mana semua nya terdapat pada permukaan bumi. Data spasial SIG mempunyai dua bagian penting yang membuatnya berbeda dari data lain, yaitu informasi lokasi dan informasi atribut. Data spasial sistem informasi geografis yang berisi informasi lokasi (informasi spasial) contohnya adalah informasi lintang dan bujur, termasuk diantaranya informasi datum dan proyeksi.
+
+Secara umum terdapat dua metode untuk menampilkan fitur geografis kedalam GIS  atau Sistem Informasi Geospasial. Pertama, dengan struktur data vektor (vector data strukture) yang terdiri dari sebuah gambaran titik geografis, baik yang berupa tanda titik, garis, maupun poligon. Model grafik vekor ini secara terpisah fitur geografis seperti batas  administratif, jalan, bangunan, dan sungai. Sebuah objek grafis biasanya terpisah fitur geografis biasanya dikaitkan dengan informasi yang mengandung penjelasan tentang atribut objek itu, dan informasi ini bisa saja disimpan di dalam berkas spreadsheets atau pangkalan data terpisah. Kedua, dengan struktur data raster (raster data strucuture), terdiri dari serangkaian sel atau pixels yang biasa dipakai untuk menggambarkan data gambar sebagai data yang berkisinambungan. Dalam struktur data yang demikian, ada unsur resolusi sebagai ukuran dari dimensi fitur geografis yang terwakili dalam bentuk pixel. Biasanya data raster ini dipakai untuk citra satelit, ortografi digital, model elevasi digital (digital elevation models, DEM), peta digital, dan sebagainya.
+
+Contoh lain dari informasi spasial yang bisa digunakan untuk mengidentifikasikan lokasi misalnya adalah Kode Pos. Sedangkan Informasi Atribut (deskriptif) biasa disebut juga dengan informasi non-spasial. Suatu lokalitas bisa mempunyai beberapa atribut atau properti yang berkaitan dengannya; contohnya jenis vegetasi, populasi, pendapatan per tahun, dan lain-lain.\cite{prasetyo2018estimasi}Data geospasial dibagi mejadi dua tipe jenis, diantaranya:
 
 \begin{enumerate}
 \item Data vektor adalah data yang direpresentasikan sebagai suatu mosaik berupa garis (arc/\textit{line}), polygon (daerah yang dibatasi oleh garis yang berawal dan berakhir pada titik yang sama), titik/\textit{point} (node yang mempunyai label), dan \textit{nodes} (merupakan titik perpotongan antara dua buah garis). Keuntungan utama dari format data vektor adalah ketepatan dalam merepresentasikan fitur titik, batasan dan garis lurus. Kegunaan Data Vektor untuk analisa yang membutuhkan ketepatan posisi, misalnya pada basis data batas-batas kadaster. Contoh penggunaan lainnya adalah untuk mendefinisikan hubungan spasial dari beberapa fitur. Kelemahan data vektor yang utama adalah ketidakmampuannya dalam mengakomodasi perubahan gradual. Data vektor ini disimpan dalam file ber ekstensi .shp atau shapefile esri \cite{prasetyo2018estimasi}.
@@ -14,7 +24,7 @@ Data Geospasial adalah data yang memuat lokasi geografis, dimensi atau ukuran, y
 		\centering
 		\includegraphics[width=0.75\textwidth]{pictures/datavektor.jpg}
 		\caption{salah satu contoh gambar data vektor}
-		\label{labelgambar1}
+		\label{labelgambar2}
 		\end{figure}	
 	Pada gambar 1 terlihat 3 bentuk data jenis vector yaitu \textit{polygon} yang berbentuk wilayah, \textit{path} yang berbentuk garis dan point yang berbentuk titik titik.
 
@@ -22,7 +32,7 @@ Data Geospasial adalah data yang memuat lokasi geografis, dimensi atau ukuran, y
 		\centering
 		\includegraphics[width=0.65\textwidth]{pictures/olahdatavektor.jpg}
 		\caption{perbandingan citra asli dengan hasil olah data vektor}
-		\label{labelgambar2}
+		\label{labelgambar3}
 		\end{figure}
 	Pada gambar 2 terlihat penerapan data \textit{vector polygon} dan \textit{ line} yang diterapkan pada salah satu bangunan. 
 \item Data raster adalah data yang dihasilkan dari penginderaan jauh. Data Raster sering disebut juga dengan sel grid. Pada data raster, obyek geografis direpresentasikan sebagai struktur sel grid yang disebut dengan pixel (\textit{picture element}). Pada data raster, resolusi (definisi visual) tergantung pada ukuran pixel-nya. Dengan kata lain, resolusi pixel menggambarkan ukuran sebenarnya di permukaan bumi yang diwakili oleh setiap pixel pada citra.
@@ -40,14 +50,14 @@ Contoh data rester diantaranya:
 		\centering
 		\includegraphics[width=0.65\textwidth]{pictures/dataraster.jpg}
 		\caption{Gambar data raster dari tampak jauh menjadi gambar permukaan bumi seperti biasa}
-		\label{labelgambar3}
+		\label{labelgambar4}
 		\end{figure}
 Jika diliat dari penginderaan jarak jauh, maka data raster ini seperti gambar permukaan bumi pada biasanya, namun jika di \textit{zoom} lebih dekat maka akan muncul terlihat \textit{pixel pixel} nya.
 		\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=0.65\textwidth]{pictures/datarasterzoom.jpg}
 		\caption{Data raster jika di \textit{zoom} ke ukuran aslinya maka nampak \textit{pixel pixel} nya}
-		\label{labelgambar4}
+		\label{labelgambar5}
 		\end{figure}
 Pada gambar 4 terlihat penerapan data raster pada salah satu bangunan yang hasilnya berbentuk \textit{pixel pixel} gambar. \textit{Pixel} gambar tersebut muncul karna gambar telah di \textit{zoom} atau dalam bentuk resolusi yang kecil.
 
@@ -56,7 +66,7 @@ Berikut ditampilkan perbedaan nampak dari kedua data yang telah dipaparkan
 		\centering
 		\includegraphics[width=0.65\textwidth]{pictures/perbedaan.jpg}
 		\caption{Perbedaan data \textit{raster} dan \textit{vektor} pada 3 jenis penerapan.}
-		\label{labelgambar5}
+		\label{labelgambar6}
 		\end{figure}
 
 
