@@ -38,28 +38,12 @@ Teknologi Sistem Informasi Geografis dapat digunakan untuk investigasi ilmiah, p
 \item \textbf{Lukman (1993)}
 \subitem Menyatakan bahwa sistem informasi geografi menyajikan informasi keruangan beserta atributnya yang terdiri dari beberapa komponen utama yaitu:
 \begin{enumerate}
-\item Masukan data merupakan proses pemasukan data pada komputer dari peta (peta topografi dan peta tematik), data statistik, data hasil analisis penginderaan jauh data hasil pengolahan citra digital penginderaan jauh, dan lain-lain. Data-data spasial dan atribut baik dalam bentuk analog maupun data digital tersebut dikonversikan kedalam format yang diminta oleh perangkat lunak sehingga terbentuk basisdata (database). Menurut Anon (2003) basisdata adalah pengorganisasian data yang tidak berlebihan dalam komputer sehingga dapat dilakukan pengembangan, pembaharuan, pemanggilan, dan dapat digunakan secara bersama oleh pengguna.
-
+\item Masukan data merupakan proses pemasukan data pada komputer dari peta (peta topografi dan peta tematik), data statistik, data hasil analisis penginderaan jauh data hasil pengolahan citra digital penginderaan jauh, dan lain-lain. Data-data spasial dan atribut baik dalam bentuk analog maupun data digital tersebut dikonversikan kedalam format yang diminta oleh perangkat lunak sehingga terbentuk basisdata (database).
 \item Penyimpanan data dan pemanggilan kembali (data storage dan retrieval) ialah penyimpanan data pada komputer dan pemanggilan kembali dengan cepat (penampilan pada layar monitor dan dapat ditampilkan/cetak pada kertas).
 
 \item Manipulasi data dan analisis ialah kegiatan yang dapat dilakukan berbagai macam perintah misalnya overlay antara dua tema peta, membuat buffer zone jarak tertentu dari suatu area atau titik dan sebagainya. Anon (2003) mengatakan bahwa manipulasi dan analisis data merupakan ciri utama dari SIG. Kemampuan SIG dalam melakukan analisis gabungan dari data spasial dan data atribut akan menghasilkan informasi yang berguna untuk berbagai aplikasi.
 
 \item Pelaporan data ialah dapat menyajikan data dasar, data hasil pengolahan data dari model menjadi bentuk peta atau data tabular. Menurut Barus dan wiradisastra (2000) Bentuk produk suatu SIG dapat bervariasi baik dalam hal kualitas, keakuratan dan kemudahan pemakainya. Hasil ini dapat dibuat dalam bentuk peta-peta, tabel angka-angka: teks di atas kertas atau media lain (hard copy), atau dalam cetak lunak (seperti file elektronik).
-\end{enumerate}
-
-\item \textbf{Menurut Anon (2003)}
-\subitem Ada beberapa alasan mengapa perlu menggunakan SIG, diantaranya adalah:
-\begin{enumerate}
-\item SIG menggunakan data spasial maupun atribut secara terintegrasi.
-\item SIG dapat digunakansebagai alat bantu interaktif yang menarik dalam usaha meningkatkan pemahaman mengenai konsep lokasi, ruang, kependudukan, dan unsur-unsur geografi yang ada dipermukaan bumi.
-\item SIG dapat memisahkan antara bentuk presentasi dan basis data.
-\item SIG memiliki kemampuan menguraikan unsur-unsur yang ada dipermukaan bumi kedalam beberapa layer atau coverage data spasial
-\item SIG memiliki kemapuan yang sangat baik dalam memvisualisasikan data spasial berikut atributnya
-\item Semua operasi SIG dapat dilakukan secara interaktif
-\item SIG dengan mudah menghsilkan peta-peta tematik
-\item semua operasi SIG dapat di costumize dengan menggunakan perintah-perintah dalam bahaa script.
-\item Peragkat lunak SIG menyediakan fasilitas untuk berkomunikasi dengan perangkat lunak lain
-\item SIG sangat membantu pekerjaan yang erat kaitannya dengan bidang spasial dan geoinformatika.
 \end{enumerate}
 
 \item \textbf{Barus dan Wiradisastra (2000)} 
@@ -81,30 +65,26 @@ Komponen-komponen pendukung SIG terdiri dari lima komponen yang bekerja secara t
  Perangkat keras SIG adalah perangkat-perangkat fisik yang merupakan bagian dari sistem komputer yang mendukung analisis geografi dan pemetaan. Perangkat keras SIG mempunyai kemampuan untuk menyajikan citra dengan resolusi dan kecepatan yang tinggi serta mendukung operasi operasi basis data dengan volume data yang besar secara cepat. Perangkat keras SIG terdiri dari beberapa bagian untuk menginput data, mengolah data, dan mencetak hasil proses. Berikut ini pembagian berdasarkan proses :
 
 \begin{enumerate}
-\item CPU (unit pemroses utama). Perangkat ini merupakan bagian dari sistem komputer yang bertindak sebagai tempat untuk pemerosessan semua instruksi-instruksi dan program (processor). Selain itu, CPU juga berfungsi untuk mengendalikan seluruh operasi yang ada di dalam lingkungan sistem komputer yang bersangkutan. Pada umumnya, perangkat komponen CPU dapat direpresentatikan oleh suatu chip-microprocessor. Kebutuhan mengenai CPU ini sangat bervariasi dari yang sederhana hingga yang canggih. Sebagai contoh, perangkat lunak GIS yang cukup kecil (lahir pada pertengahan 1980-an) dapat dijalankan minimal pada PC AT 286 (microprocessor keluarga intel 80286). Tetapi untuk GIS yang besar, dan volume datanya sangat besar, dengan menggunakan fasilitas jaringan komputer (network),dan berbasiskan web, diperlukan CPU yang memiliki processor berkemampuan tinggi (keluarga Intel pentium II, III dan IV), atau kalau perlu processor ganda (dual-core,core-2-duo,dan seterusnya). 
+\item CPU (unit pemroses utama). Perangkat ini merupakan bagian dari sistem komputer yang bertindak sebagai tempat untuk pemerosessan semua instruksi-instruksi dan program (processor). Selain itu, CPU juga berfungsi untuk mengendalikan seluruh operasi yang ada di dalam lingkungan sistem komputer yang bersangkutan. 
 
-\item RAM. Perangkat ini digunakan oleh CPU untuk menyimpan (sementara) semua data dan program yang dimasukan melalui input device. Baik untuk jangka waktu yang panjang maupun pendek. Kebutuhan GIS mengenai RAM ini juga sangat bervariasi seperti halnya CPU di atas. Untuk perangkat lunak GIS yang kecil diperlukan RAM sebesar 4Mb atau 8Mb saja. Tapi GIS yang besar, dengan menggunakan fasilitas jaringan lokal (internet), internet (web), dan analisis spasial (raster-based), maka kebutuhan GIS akan RAM menjadi cukup tinggi. Dengan memperhatikan sistem operasi pendukungnya (misalkan Windows NT 4.0), maka GIS yang berbasiskan web direkomendasikan menggunkan RAM 128 Mb (minimal 64). Sementara untuk sistem operasi yang lain dan bertindak sebagai server bisa jadi RAM yang diperlukan antara 512 Mb hingga 2 Gb. 
+\item RAM. Perangkat ini digunakan oleh CPU untuk menyimpan (sementara) semua data dan program yang dimasukan melalui input device. Baik untuk jangka waktu yang panjang maupun pendek. Kebutuhan GIS mengenai RAM ini juga sangat bervariasi seperti halnya CPU di atas. 
 
-\item Storage. Perangkat ini merupakan tempat penyimpanan data secara permanen atau semi permanen (temporary). Bila dibandingkan dengan RAM, akses pada media ini agak lambat. Harddisk,disket,CD-ROM,flash disk (yang terkoneksi melalui USB-port), dan pita magnetis merupakan contoh-contoh dari kelompok perangkat ini. Kebutuhan storage seperti ini sangat bervariasi mulai dari GIS yang satu ke GIS yang lain. Perangkat lunak yang relatif kecil dan sederhana (seperti di atas) hanya memerlukan storage di bawah 5Mb. Sementara GIS yang besar bisa memerlukan storage dengan kapasitas hingga ratusan Mb (apalagi jika data contohnya turut di copy).
+\item Storage. Perangkat ini merupakan tempat penyimpanan data secara permanen atau semi permanen (temporary). Bila dibandingkan dengan RAM, akses pada media ini agak lambat. Harddisk,disket,CD-ROM,flash disk (yang terkoneksi melalui USB-port), dan pita magnetis merupakan contoh-contoh dari kelompok perangkat ini. Kebutuhan storage seperti ini sangat bervariasi mulai dari GIS yang satu ke GIS yang lain.
 
 \item Input deivce. Perangkat ini merupakan peralatan-peralatan yang digunakan untuk memasukan data ke dalam perangkat GIS. Yang termasuk ke dalam perangkat ini adalah keyboard, mouse, digitaizer, scaner, kamera digital, dan sebagainya.
 
 \item Output device. Perangkat ini merupakan peralatan-peralatan yang digunakan untuk merepresentasikan data dan atau informasi GIS. Yang termasuk ke dalam perangkat ini adalah layer monitor, printer plotter, dan sebagainya.
 
+\item Peripheral (lainnya). Perangkat pelengkap ini merupaka bagian dari sistem komputer GIS yang belum termasuk ke dalam perangkat-perangkat yang telah di sebutkan di atas. Untuk GIS yang kecil dan sederhana peripheral kemungkinan sama sekali tidak diperlukan, tetapi untuk GIS yang besar apalagi menggunakan jaringan dan dapat di peresentasikan di jaringan internet (web), maka diperlukan kabel-kabel jaringan, modem, ISP, router, card jaringan/ ethernet, CPU khusus untuk clients dan server, dan sebagainya.
+Pada saat ini GIS sudah dapat digunakan pada platform destkop, PC, laptop, workstation, dan multi-user host. Dengan demikian, fungsionalitas perangkat tidak terlalu terikat erat dengan karakteristik-karakteristik perangkat fisiknya. 
 
 \end{enumerate}
-
 \section{Komponen Sistem Informasi Geografis}
 Komponen-komponen pendukung SIG terdiri dari lima komponen yang bekerja secara terintegrasi yaitu perangkat keras (hardware), perangkat lunak (software), data, manusia, dan metode yang dapat diuraikan sebagai berikut:
 
-A.   Perangkat Keras (Hardware)
+\subsection{ Perangkat Keras (Hardware)}
  Perangkat keras SIG adalah perangkat-perangkat fisik yang merupakan bagian dari sistem komputer yang mendukung analisis geografi dan pemetaan. Perangkat keras SIG mempunyai kemampuan untuk menyajikan citra dengan resolusi dan kecepatan yang tinggi serta mendukung operasi operasi basis data dengan volume data yang besar secara cepat. Perangkat keras SIG terdiri dari beberapa bagian untuk menginput data, mengolah data, dan mencetak hasil proses. Berikut ini pembagian berdasarkan proses :
 
- Input Data	 : mouse, digitizer, scanner
-
- Olah Data 	 : harddisk, processor, RAM, VGA card
-
- Output Data : plotter, printer, screening
 \begin{enumerate}
 \item CPU (unit pemroses utama). Perangkat ini merupakan bagian dari sistem komputer yang bertindak sebagai tempat untuk pemerosessan semua instruksi-instruksi dan program (\textit{processor}). Selain itu, CPU juga berfungsi untuk mengendalikan seluruh operasi yang ada di dalam lingkungan sistem komputer yang bersangkutan. Pada umumnya, perangkat komponen CPU dapat direpresentatikan oleh suatu \textit{chip-microprocessor}. Kebutuhan mengenai CPU ini sangat bervariasi dari yang sederhana hingga yang canggih. Sebagai contoh, perangkat lunak GIS yang cukup kecil (lahir pada pertengahan 1980-an) dapat dijalankan minimal pada PC AT 286 (\textit{microprocessor} keluarga intel 80286). Tetapi untuk GIS yang besar, dan volume datanya sangat besar, dengan menggunakan fasilitas jaringan komputer (\textit{network}),dan berbasiskan web, diperlukan CPU yang memiliki \textit{processor} berkemampuan tinggi (keluarga Intel pentium II, III dan IV), atau kalau perlu processor ganda (\textit{dual-core,core-2-duo},dan seterusnya).
 \item RAM. Perangkat ini digunakan oleh CPU untuk menyimpan (sementara) semua data dan program yang dimasukan melalui \textit{input device}. Baik untuk jangka waktu yang panjang maupun pendek. Kebutuhan GIS mengenai RAM ini juga sangat bervariasi seperti halnya CPU di atas. Untuk perangkat lunak GIS yang kecil diperlukan RAM sebesar 4Mb atau 8Mb saja. Tapi GIS yang besar, dengan menggunakan fasilitas jaringan lokal (internet), internet (web), dan analisis spasial (\textit{raster-based}), maka kebutuhan GIS akan RAM menjadi cukup tinggi. Dengan memperhatikan sistem operasi pendukungnya (misalkan Windows NT 4.0), maka GIS yang berbasiskan web direkomendasikan menggunkan RAM 128 Mb (minimal 64). Sementara untuk sistem operasi yang lain dan bertindak sebagai server bisa jadi RAM yang diperlukan antara 512 Mb hingga 2 Gb. 
@@ -114,5 +94,6 @@ A.   Perangkat Keras (Hardware)
 \item Peripheral (lainnya). Perangkat pelengkap ini merupaka bagian dari sistem komputer GIS yang belum termasuk ke dalam perangkat-perangkat yang telah di sebutkan di atas. Untuk GIS yang kecil dan sederhana peripheral kemungkinan sama sekali tidak diperlukan, tetapi untuk GIS yang besar apalagi menggunakan jaringan dan dapat di peresentasikan di jaringan internet (web), maka diperlukan kabel-kabel jaringan, modem, ISP, router, card jaringan/ ethernet, CPU khusus untuk \textit{clients} dan \textit{server}, dan sebagainya.
 Pada saat ini GIS sudah dapat digunakan pada platform destkop, PC, laptop, workstation, dan multi-user host. Dengan demikian, fungsionalitas perangkat tidak terlalu terikat erat dengan karakteristik-karakteristik perangkat fisiknya. Oleh sebab itu, sebagaimana telah disinggung di muka, sebuah PC yang memiliki RAM yang relatif kecilpun (4 atau 8 Mb) sudah dapat menangani pekerjaan GIS ( Relatif kecil dan sederhana) di masa yang lampau. Bahasan yang cukup lengkap mengenai perangkat keras pendukung GIS yang lahir pada pertengahan tahun 1980-an hingga di awal 1990-an dapat ditemukan.
 \end{enumerate}
+
 
 
