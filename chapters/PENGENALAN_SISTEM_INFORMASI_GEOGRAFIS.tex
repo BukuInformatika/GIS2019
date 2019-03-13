@@ -110,3 +110,38 @@ Perangkat lunak khusus aplikasi GIS sering digunakan untuk menjalankan tugas-tug
 
 Pemilihan perangkat lunak GIS akan sangat bergantung pada sejumlah faktor, termasuk tujuan-tujuan penggunaan atau aplikasi, biaya pembelian dan pemeliharaan, kesiapan dan kemampuan personil-personil pengguna berserta agen perangkat lunak yang yang bersangkutan. 
 
+\subsection{Data}
+Pada prinsipnya terdapat dua jenis data untuk mendukung SIG yaitu :
+\begin{enumerate}
+\item Data Spasial
+\subitem Data spasial adalah gambaran nyata suatu wilayah yang terdapat di permukaan bumi. Umumnya direpresentasikan berupa grafik, peta, gambar dengan format digital dan disimpan dalam bentuk koordinat x,y (vektor) atau dalam bentuk image (raster) yang memiliki nilai tertentu.
+Sebagian besar data yang akan ditangani dalam SIG merupakan data spasial yang berorientasi geografis, memiliki sistem koordinat tertentu sebagai dasar referensinya dan mempunyai dua bagian penting yang membuatnya berbeda dari data lain, yaitu informasi lokasi (spasial) dan informasi deskriptif (attribute) yang dijelaskan berikut ini :
+
+\begin{enumerate}
+\item Informasi lokasi (spasial), berkaitan dengan suatu koordinat baik koordinat geografi (lintang dan bujur) dan koordinat XYZ, termasuk diantaranya informasi datum dan proyeksi.
+\item Informasi deskriptif (atribut) atau informasi non spasial, suatu lokasi yang memiliki beberapa keterangan yang berkaitan dengannya, contohnya : jenis vegetasi, populasi, luasan, kode pos, dan sebagainya.
+\end{enumerate}
+
+Secara sederhana format dalam bahasa komputer berarti bentuk dan kode penyimpanan data yang berbeda antara file satu dengan lainnya. Dalam SIG, data spasial dapat direpresentasikan dalam dua format,yaitu:
+\begin{enumerate}
+\item Data Vektor
+Data vektor merupakan bentuk bumi yang direpresentasikan ke dalam kumpulan garis, area (daerah yang dibatasi oleh garis yang berawal dan berakhir pada titik yang sama), titik dan nodes (merupakan titik perpotongan antara dua buah garis).Keuntungan utama dari format data vektor adalah ketepatan dalam merepresentasikan fitur titik, batasan dan garis lurus. Pada gambar \ref{data_vektor} merupakan tampilannya
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{pictures/data_vektor}
+\caption{Data Vektor}
+\label{data_vektor}
+\end{figure}
+
+
+\item Data Raster
+Data raster (atau disebut juga dengan sel grid) adalah data yang dihasilkan dari sistem Penginderaan Jauh. Pada data raster,obyek geografis direpresentasikan sebagai struktur selgrid yang disebut dengan pixel(picture element). Pada gambar \ref{data_raster} merupakan tampilannya
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{pictures/data_raster}
+\caption{Data Raster}
+\label{data_raster}
+\end{figure}
+\end{enumerate}
+\end{enumerate}
+
