@@ -169,5 +169,24 @@ Pada dasar nya sistem informasi geografis terdapat 6 proses yaitu:
 \item Input data
 \subitem Proses input data digunakan untuk menginputkan data spasial dan data non-spasial. Data spasial biasanya berupa peta analog. Untuk SIG harus menggunakan peta digital sehingga peta analog tersebut harus dikonversi ke dalam bentuk peta digital dengan menggunakan alat digitizer. Selain proses digitasi dapat juga dilakukan proses overlay dengan melakukan proses scanning pada peta analog.
 
+\item Manipulasi data
+\subitem Tipe data yang diperlukan oleh suatu bagian SIG mungkin perlu dimanipulasi agar sesuai dengan sistem yang dipergunakan. Oleh karena itu SIG mampu melakukan fungsi edit baik untuk data spasial maupun non-spasial.
+Subsistem ini berfungsi untuk membedakan data yang akan diproses dalam SIG. Subsistem ini dapat digunakan untuk merubah format data, mendapatkan parameter dan melalui proses dalam pengelolaan data dapat pula dijumpai hambatan yang timbul. Hingga saat ini masih diupayakan mendapatkan cara kerja yang lebih cepat untuk evaluasi dalam Subsistem ini.
+
+\item Manajemen data
+\subitem Setelah data spasial dimasukkan maka proses selanjutnya adalah pengolahan data non-spasial. Pengolahan data non-spasial meliputi penggunaan DBMS untuk menyimpan data yang memiliki ukuran besar.
+Subsistem pengelolaan data pada dasarnya dapat dimanfaatkan untuk menimbun dan menarik kembali dari arsip data dasar. Berbagai cara yang dapat digunakan dalam mengelola data dan pengelolaan data ini akan sejalan dengan struktur data yang digunakan. Pengorganisasian data dalam bentuk arsip dapat dimanfaatkan dalam Subsistem Pengelolaan data. Pengorganisasian data keruangan diambil dan dianalisis, hal ini merupakan fungsi dari Subsistem tersebut. Perbaikan data dasar dengan cara menambah, mengurangi, atau memperbaharui dilakukan pada subsistem ini meliputi:
+\begin{enumerate}
+\item Posisinya
+\item Keterhubungan atau topologi, atribut elemen geografi, yaitu titik, garis, atau area, untuk menyajikan obyek pada permukaan bumi
+\item Struktur dan organisasi penyimpanan.Program komputer yang digunakan dalam pengorganisasian data dasar disebut dengan Data Base Management System (DBMS).Untuk jelasnya dapat dilihat pada gambar berikut, yang menjelaskan tentang komponen data dasar geografi.
+\end{enumerate}
+
+\item Query dan analisis
+\subitem Query adalah proses analisis yang dilakukan secara tabular. Secara fundamental SIG dapat melakukan dua jenis analisis, yaitu:  Analisis Proximity .Analisis Proximity merupakan analisis geografi yang berbasis pada jarak antar layer. SIG menggunakan proses buffering (membangun lapisan pendukung di sekitar layer dalam jarak tertentu) untuk menentukan dekatnya hubungan antar sifat bagian yang ada.
+
+\item Analisis Overlay
+\subitem Overlay merupakan proses penyatuan data dari lapisan layer yang berbeda. Secara sederhana overlay disebut sebagai operasi visual yang membutuhkan lebih dari satu layer untuk digabungkan secara fisik.
+
 \end{enumerate}
 
