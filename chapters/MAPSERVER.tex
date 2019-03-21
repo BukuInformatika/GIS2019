@@ -5,3 +5,21 @@ MapServer adalah aplikasi Open Source yang memungkinkan suatu data peta diakses 
 MapServer merupakan sebuah program aplikasi GIS berbasis web yang open source. MapServer juga dikembangkan tanpa tujuan komersial, sehingga pengguna MapServer dapat menggunakan dan mengembangkan program MapServer. 
 Mapserver merupakan aplikasi freeware dan open source yang meungkinkan kita menampilkan dataspasial (peta) dalam platform web.Aplikasi ini pertama kali dikembangkan oleh Universitas Minesota, Amerika Serikat untuk proyekFor Net (sebuah proyek untuk sumber daya alam )yang disponsori oleh NASA (National Aeronauticsand Space Administration) Support NASA dilanjutkandan dikembangkan proyek TerraSIP  untuk manajemendata lahan. Saat ini sifatnya yang terbuka (open source), pengembangan suatu mapserver dilakukan oleh pengembang dari berbagai Negara. 
 Pada bentuk yang paling dasar (based), MapServer berupa sebuah  program CGI (Common Gateway Interface). Program Mapserver tersebut dieksekusi pada sebuah webserver dengan konfigurasi peta yang disimpan dalam sebuah file \*.MAP, kemudian kirim dan ditampilkan oleh web browser baik dalam bentuk gambar peta atau  bentuk yang lain. 
+
+\section{Fitur MapServer}
+Ada beberapa fitur utama yang ada dalam mapserver untuk mendukung fungsi sebagai server GIS berbasis web antara lain adalah :
+\begin{enumerate}
+\item Menampilkan data spasial dalam format vector seperti : Shapefile (ESRI), ArcSDE (ESRI), PostGis dan berbagai format data vector lain dengan dukungan penggunaan library OGR. 
+\item Menampilkan data dalam format raster yaitu TIFF/GeoTIFF, EPPL7 dan berbagai format lain dengan menggunakan library GDAL.
+\item Menggunakan Quadtree dalam index data, sehingga operasi tersebut cepat dilakukan. 
+\item Dapat dikembangkan, dengan tampilan keluaran yang dapat diatur menggunakan file-file template.
+\item Dapat melakukan seleksi obyek berdasar nilai, titik, area, atau berdasar sebuah obyek spesial tertentu.
+\item Mendukung rendering  karakter berupa font TrueType. 
+\item Mendukung penggunaan data raster maupun vector dengan mode tiled (dibagi bagi menjadi sub bagian yang lebih kecil sehingga proses untuk mengambil data dan menampilkan dapat dipercepat).
+\item Dapat menggambarkan bagian - bagian  peta secara otomatis, skala grafis, peta indeks maupun legenda peta.
+\item Dapat menggambarkan peta tematik yang dibangun menggunakan ekspresi lojik maupun ekspresi regular.
+\item Dapat menampilkan label dari objek spasial, dengan label dapat diatur sedemikian rupa, sehingga tidak saling tumpang tindih.
+\item Melalui parameter yang ditentukan pada URL konfigurasi diatur secara on the fly  
+\item Dapat menangani beragam sistem proyeksi dalam jaringan internet. 
+\end{enumerate}
+
