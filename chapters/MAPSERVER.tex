@@ -23,3 +23,27 @@ Ada beberapa fitur utama yang ada dalam mapserver untuk mendukung fungsi sebagai
 \item Dapat menangani beragam sistem proyeksi dalam jaringan internet. 
 \end{enumerate}
 
+\section{Arsitektur MapServer}
+ Secara umum model arsitektur yang digunakan oleh mapserver dapat dilihat pada gambar \ref{arsitektur_map_server} sebagai berikut:
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{pictures/arsitektur_map_server}
+\caption{Arsitektur Map Server}
+\label{arsitektur_map_server}
+\end{figure}
+
+Pola interaksi yang digunakan antara klien dan server berdasarkan skenario request dan respon. Web browser di sisi klien mengirim request ke server web.Karena server web tidak memiliki kemampuan untuk memproses data spasial maka request berkaitan dengan pemrosesan peta akan dikerjakan oleh mapserver sesuai dengan register yang diberikan oleh web server terkait alokasi task dan resource.
+Hasil dari pemrosesan yang sudah dilakukan akan di replay melalui server web yang dibungkus dalam sebuah file dalam bentuk HTML atau applet
+
+Mapserver menggunakan pendekatan thin client.
+Semua pemrosesan dilakukan di sisi server. Informasi peta dikirimkan ke web browser di sisi klien dalam bentuk file gambar (JPG, PNG, GIF atau TIFF). Kelebihan aplikasi dengan konsep thin client ini adalah sudah beragamnya aplikasi pendukung dalam bentuk framework jadi seperti Chameleon atau cartoweb \cite{walter2018web}
+
+
+\subitem \textbf{Thin Client}
+\begin{enumerate}
+\item Fokus pada sisi server.
+\item Sebagian besar proses dan analisis data dilakukan berdasarkan request di sisi server.
+\item Hasilnya nanti dikirimkan ke klien dalam format standard HTML, yang di dalamnya terdapat file gambar dalam format standard (misalnya GIF, PNG atau JPG)
+\item Kelemahan utama pendekatan tersebut menyangkut keterbatasan interaksi opsi dengan user yang kurang fleksibel.
+\end{enumerate}
