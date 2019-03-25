@@ -47,3 +47,19 @@ Semua pemrosesan dilakukan di sisi server. Informasi peta dikirimkan ke web brow
 \item Hasilnya nanti dikirimkan ke klien dalam format standard HTML, yang di dalamnya terdapat file gambar dalam format standard (misalnya GIF, PNG atau JPG)
 \item Kelemahan utama pendekatan tersebut menyangkut keterbatasan interaksi opsi dengan user yang kurang fleksibel.
 \end{enumerate}
+
+\section{Komponen Teknis}
+Komponen yang ada pada sebuah aplikasi GIS mempunyai fungsi utama untuk membaca dan menulisdata spasial, baik yang tersimpan dalam sebuahshapefile (*.shp) atau tersimpan ke dalam sebuah database (Eddy 2006).
+Dalam MapServer yang sudah berjalan ada beberapa Komponen utama yang digunakan secara peneuh untuk menjalankan Aplikasi GIS untuk menangani data spasial baik yang tersimpan dalam sebuah flat file atau juga dalam DBMS yaitu :
+\begin{enumerate}
+\item SHAPELIB
+\subitem Shapelib merupakan library yang ditulis menggunakan bahasa pemrograman C yang digunakan untuk melakukan proses read terhadap Shapefile (*.shp) yang sudah didefinisikan. 
+
+\item ESRI (Environmental System Research Institute)
+\subitem Format dalam shapefile umum digunakan untuk menyimpan data vector simple (tanpa topologi) dengan atribut, shapefile merupakan format data default yang digunakan dalam GIS.2.
+
+\item GDAL (Geographic Data Abstraction Library) 
+\subitem merupakan library yang berfungsi sebagai penerjemah untuk berbagi format data raster, dan sangat dimungkinkan untuk semua abstraksi dari semua data format yang didukung, sehingga beragam format data yang ada akan menghasilkan satu format baku yang dapat digunakan untuk pengembang dalam menampilkan bentuk/format peta yang sesuai semisal akses data untuk direpresentasikan dalam (.gif), (.tif), (.img), (.adf), (.hdrdst3).
+\end{enumerate}
+
+
