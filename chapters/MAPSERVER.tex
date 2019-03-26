@@ -60,6 +60,20 @@ Dalam MapServer yang sudah berjalan ada beberapa Komponen utama yang digunakan s
 
 \item GDAL (Geographic Data Abstraction Library) 
 \subitem merupakan library yang berfungsi sebagai penerjemah untuk berbagi format data raster, dan sangat dimungkinkan untuk semua abstraksi dari semua data format yang didukung, sehingga beragam format data yang ada akan menghasilkan satu format baku yang dapat digunakan untuk pengembang dalam menampilkan bentuk/format peta yang sesuai semisal akses data untuk direpresentasikan dalam (.gif), (.tif), (.img), (.adf), (.hdrdst3).
+
+
+\item LIBPNG/LIBJPG
+\subitem Setelah data dipastikan ditulis dalam bentuk/format yang standard yaitu .jpg atau. Png maka komponen salanjutnya yang tidak kalah penting adalah LIBPNG/JPG yang berfungsi untuk menampilkan peta dalam layar dengan format .JPG atau .PNG sehingga attribute peta bisa tampilsesuai dengan topologi peta yang sudah digunakan.
+GD/PROJECTION Library ini digunakan sebagai media untuk identifikasi jenis peta yang ditampilkan, biasanya peta akan ditampilkan per layer sesuai dengan penamaan layer masing –  masing. 
+Fungsi ini digunakan untuk menggambar obyek geografis yang ada seperti garis, polygon, atau bentuk geometris lainnya. Selain itu fungsi ini digunakan untuk memproyeksikan peta, menentukan bagaimana objek-objek di permukaan bumi (yang sebenarnya tidak datar) dipindahkan atau diproyeksikan pada permukaan peta yaitu disebuah bidang datar, ilustrasi pada gambar \ref{Contoh Proyeksi Peta} berikut ini.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{pictures/contoh_proyeksi_peta}
+\caption{Contoh Proyeksi Peta}
+\label{Contoh Proyeksi Peta}
+\end{figure}
 \end{enumerate}
 
+\section{ Data Spasial}
+Paling tidak dibutuhkan beberapa file data vektor dalam format shapefile Arcview untuk mengembangkan aplikasi map server, . aplikasi Mapserver bisa juga disertai dengan contoh file citra digital dalam format TIFF, JPEG, GIF dsb jika ada
 
