@@ -74,6 +74,28 @@ Fungsi ini digunakan untuk menggambar obyek geografis yang ada seperti garis, po
 \end{figure}
 \end{enumerate}
 
-\section{ Data Spasial}
+\section{Data Spasial}
 Paling tidak dibutuhkan beberapa file data vektor dalam format shapefile Arcview untuk mengembangkan aplikasi map server, . aplikasi Mapserver bisa juga disertai dengan contoh file citra digital dalam format TIFF, JPEG, GIF dsb jika ada
 
+\section{Data Mapserver}
+Data aplikasi MapServer secara garis besar:
+\begin{enumerate}
+\item File MapServer
+\item Map file dan PHP/MapScript
+\item Data Spasial
+\item Vektor dan raster
+\item File HTML
+\item JavaScript, Image, Simbol, Huruf, HTML, PHP, Css, dll
+\end{enumerate}
+
+\section{PHP/MAPSCRIPT FRAMEWORK}
+Php/Mapscript, atau sering disebut Mapscript saja, adalah sebuah modul yang digunakan untuk membuat fungsi-fungsi dan class-class MapServer agar dapat dijalankan di PHP3/PHP4 \cite{baghdadi2015theia}. Secara garis besar proses pengolahan yang ditangani oleh mapscript dapat dilihat pada gambar \ref{php-mapscript} berikut ini.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{pictures/php-mapscript}
+\caption{php/Mapscript}
+\label{php-mapscript}
+\end{figure}
+
+Proses diawali dengan request dari client ke server. Web Server akan menjalankan fungsi fungsi yang ada di library Mapscript. Data spatial yang akan digunakan berupa data bertipe shapefile, yang merupakan file spatial standar dari ESRI. Dengan perantara MapFile, sebagai pengatur setting dari data yang akan ditampilkan, MapScript akan membaca data spatial di shapefile ini, memprosesnya sesuai permintaan dari client, kemudian menyimpannya kedalam bentuk file gambar (GIF,JPG atau PNG). File gambar ini kemudian akan diload ke client dalam bentuk object Image HTML. Karena bentuk peta yang ditampilkan merupakan file gambar, maka kerja client tidak berat, terutama jika dibandingkan dengan cara lain yang menggunakan activeX
