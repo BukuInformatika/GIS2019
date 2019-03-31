@@ -4,3 +4,40 @@ Mapfile adalah jantung dari MapServer. Mapfile mendefinisikan hubungan antara ob
 File .MAP adalah file teks ASCII, dan terdiri dari berbagai objek. Setiap objek memiliki beragam parameter yang tersedia. Mapfile terdiri dari objek MAP, yang harus dimulai dengan kata MAP. Konsep LAPISAN, Lapisan adalah kombinasi data dan model. Data, dalam bentuk atribut geometri, diberi model menggunakan arahan CLASS dan STYLE.
 
 Mapfile menyediakan antarmuka untuk MapServer untuk pembuatan aplikasi Web. Mapfile dapat digunakan secara independen dari CGI MapServer atau modulnya dapat dimuat yang menambahkan MapServer ke bahasa PHP, Perl, Python, Ruby, Tcl, Java, dan .NET.
+
+Contoh mapfile sederhana yang hanya menampilkan satu layer serta output gambar peta.
+\begin{lstlisting}
+MAP
+    NAME "sample"
+    STATUS ON
+    SIZE 600 400
+    SYMBOLSET "../etc/symbols.txt"
+    EXTENT -180 -90 180 90
+    UNITS DD
+    SHAPEPATH "../data"
+    IMAGECOLOR 255 255 255
+    FONTSET "../etc/fonts.txt"
+    # Start of web interface definition
+    WEB
+        IMAGEPATH "/ms4w/tmp/ms_tmp/"
+        IMAGEURL "/ms_tmp/"
+    END # WEB
+    # Start of layer definitions
+    LAYER
+        NAME 'global-raster'
+        TYPE RASTER
+        STATUS DEFAULT
+        DATA bluemarble.gif
+    END # LAYER
+END # MAP
+\end{lstlisting}
+
+Catatan:
+\begin{enumerate}
+\item Komentar dalam mapfile ditentukan dengan karakter '\#'.
+\item MapServer mem-parsing mapfile dari atas ke bawah, oleh karena itu lapisan pada ujung mapfile akan ditarik terakhir.
+\item Path harus dikutip (kutipan tunggal atau ganda).
+\item Mapfile tidak case-sensitive.
+\item String yang berisi karakter non-alfanumerik atau kata kunci MapServer HARUS dikutip. Disarankan untuk menempatkan SEMUA string dalam tanda kutip ganda.
+\item Mapfile memiliki struktur hierarkis, dengan objek MAP menjadi "root".
+\end{enumerate}
