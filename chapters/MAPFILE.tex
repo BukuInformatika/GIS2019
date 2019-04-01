@@ -41,3 +41,23 @@ Catatan:
 \item String yang berisi karakter non-alfanumerik atau kata kunci MapServer HARUS dikutip. Disarankan untuk menempatkan SEMUA string dalam tanda kutip ganda.
 \item Mapfile memiliki struktur hierarkis, dengan objek MAP menjadi "root".
 \end{enumerate}
+
+\section{Pembahasan Syntax}
+\subsection{MAP}
+Objek peta dimulai dengan kata MAP, dan berakhir dengan kata END.
+\begin{lstlisting}
+MAP
+  NAME "sample"
+  EXTENT -180 -90 180 90 # Geographic
+  SIZE 800 400
+  IMAGECOLOR 128 128 255
+END #MAP
+\end{lstlisting}
+
+Penjelasan:
+\begin{enumerate}
+\item NAME adalah nama map
+\item EXTENT adalah tingkat output dalam unit peta output.
+\item SIZE adalah lebar dan tinggi gambar peta dalam piksel.
+\item IMAGECOLOR adalah warna latar belakang gambar default.
+\end{enumerate}
