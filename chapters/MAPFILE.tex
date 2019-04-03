@@ -61,3 +61,49 @@ Penjelasan:
 \item SIZE adalah lebar dan tinggi gambar peta dalam piksel.
 \item IMAGECOLOR adalah warna latar belakang gambar default.
 \end{enumerate}
+
+\subsection{LAYER Object}
+Objek layer ada 2 yaitu Raster dan Vektor.
+\begin{enumerate}
+\item Raster Layers
+\begin{lstlisting}
+LAYER
+    NAME "bathymetry"
+    TYPE RASTER
+    STATUS DEFAULT
+    DATA "bath_mapserver.tif"
+END # LAYER
+\end{lstlisting}
+
+Penjelasan:
+\begin{enumerate}
+\item NAME adalah nama layer.
+\item TYPE adalah jenis dari layer tsb.
+\item STATUS adalah kondisi dari layer tsb.
+\item DATA adalah file SHP atau tif yang berisi informasi koordinat.
+\end{enumerate}
+
+\item Vertor Layer
+\begin{lstlisting}
+LAYER
+  NAME "world_poly"
+  DATA 'shapefile/countries_area.shp'
+  STATUS ON
+  TYPE POLYGON
+  CLASS
+    NAME 'The World'
+    STYLE
+      OUTLINECOLOR 0 0 0
+    END # STYLE
+  END # CLASS
+END # LAYER
+\end{lstlisting}
+
+Penjelasan:
+\begin{enumerate}
+\item NAME adalah nama layer.
+\item TYPE adalah jenis dari layer yang akan di tampilkan seperti point, line, atau polygon.
+\item STATUS adalah kondisi dari layer tsb.
+\item DATA adalah file SHP atau tif yang berisi informasi koordinat
+\end{enumerate}
+\end{enumerate}
