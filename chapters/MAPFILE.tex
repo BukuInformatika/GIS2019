@@ -107,3 +107,32 @@ Penjelasan:
 \item DATA adalah file SHP atau tif yang berisi informasi koordinat
 \end{enumerate}
 \end{enumerate}
+
+\subsection{CLASS and STYLE Objects}
+\begin{lstlisting}
+CLASS
+  NAME "Primary Roads"
+  STYLE
+    SYMBOL "circle"
+    COLOR 178 114 1
+    SIZE 15
+  END # STYLE
+  STYLE
+    SYMBOL "circle"
+    COLOR 254 161 0
+    SIZE 7
+  END # STYLE
+END # CLASS
+\end{lstlisting}
+
+Penjelasan:
+\begin{enumerate}
+\item NAME adalah nama layer.
+\item STYLE memegang parameter untuk simbolisasi dan gaya. Berbagai gaya dapat diterapkan dalam CLASS atau LABEL.
+\item COLOR penentuan warna pada objek.
+\end{enumerate}
+
+\subsection{PROJECTION}
+Untuk mengatur proyeksi Anda harus menetapkan satu objek proyeksi untuk gambar output (dalam objek MAP) dan satu objek proyeksi untuk setiap lapisan (dalam objek LAPISAN) yang akan diproyeksikan. Objek proyeksi terdiri dari serangkaian kata kunci PROJ.4, yang dapat ditentukan dalam objek secara langsung atau dirujuk dalam file EPSG. File EPSG adalah file pencarian yang berisi parameter proyeksi, dan merupakan bagian dari perpustakaan PROJ.4.
+
+
