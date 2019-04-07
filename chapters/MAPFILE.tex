@@ -135,4 +135,63 @@ Penjelasan:
 \subsection{PROJECTION}
 Untuk mengatur proyeksi Anda harus menetapkan satu objek proyeksi untuk gambar output (dalam objek MAP) dan satu objek proyeksi untuk setiap lapisan (dalam objek LAPISAN) yang akan diproyeksikan. Objek proyeksi terdiri dari serangkaian kata kunci PROJ.4, yang dapat ditentukan dalam objek secara langsung atau dirujuk dalam file EPSG. File EPSG adalah file pencarian yang berisi parameter proyeksi, dan merupakan bagian dari perpustakaan PROJ.4.
 
+Contoh parameter proyeksi:
+\begin{lstlisting}
+PROJECTION
+   "init=epsg:4326"
+END
+\end{lstlisting}
+
+\section{Tutorial Membuat mapfile untuk WCS, WFS, WMS dan WMTS}
+\subsection{Membuat Mapfile untuk WCS}
+\begin{enumerate}
+\item Buat file baru dengan nama wcs.map untuk menyiman script konfigurasi wcs
+\item Masukan script map objek di bawah ini ke file wcs.map, pada script ini kita menentukan lebar peta, warna gambar serta mendefinisikan sumber map, fontset dan symbolset yang akan digunakan. 
+\begin{lstlisting}
+MAP
+   NAME WCS_Server
+   STATUS ON
+   SIZE 400 300
+   SYMBOLSET "../../etc/symbols.txt"
+   EXTENT -2200000 -712631 3072800 3840000
+   UNITS METERS
+   SHAPEPATH "../data"
+   IMAGECOLOR 255 255 255
+   FONTSET "../../etc/fonts.txt"
+END #Map file
+\end{lstlisting}
+\item Setelah itu kita masukan script untuk konfigurasi web interfacenya sebelum syntax END, didalam script ini berisi konfigurasi untuk web interface berupa tempat gambar serta metadata yang mendefinisakan informasi dalam tampilan antarmuka web.
+\begin{lstlisting}
+WEB
+   IMAGEPATH "/ms4w/tmp/ms_tmp/"
+   IMAGEURL "/ms_tmp/"
+   METADATA
+     "wcs_label"           "GMap WCS Demo Server" ### required
+     "wcs_description"     "Some text description of the service"
+     "wcs_onlineresource"  "http://localhost:8080/cgi-bin/mapserv.exe?map=C:/ms4w/apps/indo/map/mywcs.map&" 
+     "wcs_fees"            "none"
+     "wcs_accessconstraints"    "none"
+     "wcs_keywordlist"          "wcs,test"
+     "wcs_metadatalink_type"    "TC211"
+     "wcs_metadatalink_format"  "text/plain"
+     "wcs_metadatalink_href"    "http://awangga.net"
+     "wcs_address"              "124 Gilmour Street"
+     "wcs_city"                 "Ottawa"
+     "wcs_stateorprovince"      "ON"
+     "wcs_postcode"             "90210"
+     "wcs_country"              "Canada"
+     "wcs_contactelectronicmailaddress" "blah@blah"
+     "wcs_contactperson"            "me"
+     "wcs_contactorganization"      "unemployed"
+     "wcs_contactposition"          "manager"
+     "wcs_contactvoicetelephone"    "613-555-1234"
+     "wcs_contactfacimiletelephone" "613-555-1235"
+     "wcs_service_onlineresource"   "http://localhost:8080/cgi-bin/mapserv.exe?map=C:/ms4w/apps/indo/map/mywcs.map&"
+     "wcs_enable_request"           "*"
+   END #Metadata
+ END #Web
+\end{lstlisting}
+\end{enumerate}
+
+
 
