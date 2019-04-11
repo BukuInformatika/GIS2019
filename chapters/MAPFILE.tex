@@ -317,4 +317,57 @@ END #Map file
    END
  END
 \end{lstlisting}
+
+\item Lalu kita masukan script projection  untuk menentukan sistem referensi geografis agar map dapar memberikan output sesuai dengan source mapnya.
+
+\begin{lstlisting}
+ PROJECTION
+     "init=epsg:4326"
+ END
+\end{lstlisting}
+
+\item Tambahkan dan aktifkan syntax debug untuk mempermudah debuging jika terdapat error ketika mapfile dibuka/dijalankan.
+\begin{lstlisting}
+DEBUG on
+\end{lstlisting}
+
+\item Tambahkan script output format untuk mengatur format gambar yang di keluarkan pada mapfile ini, ada 4 jenis output yaitu png, png8, png256, jpg.
+\begin{lstlisting}
+ OUTPUTFORMAT
+   NAME "png"
+   DRIVER "AGG/PNG"
+   IMAGEMODE "rgba"
+   EXTENSION "png"
+   MIMETYPE "image/png"
+   IMAGEMODE RGBA
+ END
+
+ OUTPUTFORMAT
+   NAME "png8"
+   DRIVER "AGG/PNG"
+   IMAGEMODE "rgba"
+   EXTENSION "png"
+   MIMETYPE "image/png"
+   IMAGEMODE RGBA
+   TRANSPARENT ON
+   FORMATOPTION "QUANTIZE_FORCE=ON"
+   FORMATOPTION "QUANTIZE_DITHER=ON"
+   FORMATOPTION "QUANTIZE_COLORS=250"
+ END
+
+  OUTPUTFORMAT
+   NAME "png256"
+   DRIVER "AGG/PNG"
+   IMAGEMODE "pc256"
+   EXTENSION "png"
+ END
+
+ OUTPUTFORMAT
+   NAME "jpg"
+   DRIVER "AGG/JPEG"
+   EXTENSION "jpg"
+   FORMATOPTION "QUALITY=85"
+ END
+\end{lstlisting}
+\item Setelah itu masukan script layer untuk menampilkan data provinsi, disini kita membuat class untuk setiap provinsi. tidak lupa disini juga mendefinisikan file map yang akan ditampilkan pada layer ini serta tipe mapfile pada layer ini. 
 \end{enumerate}
