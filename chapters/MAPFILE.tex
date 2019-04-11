@@ -280,7 +280,41 @@ END # Map File
 \begin{lstlisting}
 http://localhost:8080/cgi-bin/mapserv.exe?map=C:/ms4w/apps/indo/map/mywcs.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCapabilities
 \end{lstlisting}
+
+Jangan lupa untuk merubah direktori map dan parameter service berisi WCS, hasilnya berupa script xml.
 \end{enumerate}
 
+\subsection{Membuat Mapfile untuk WFS}
+\begin{enumerate}
+\item Buat file baru dengan nama wfs.map untuk menyiman script konfigurasi wfs
+\item Masukan script map objek di bawah ini ke file wfs.map, pada script ini kita menentukan lebar peta, warna gambar serta mendefinisikan sumber map, fontset dan symbolset yang akan digunakan. 
 
+\begin{lstlisting}
+MAP
+ NAME "WFS_server"
+ STATUS ON
+ SIZE 400 300
+ #SYMBOLSET "../../etc/symbols.txt"
+ EXTENT -180 -90 180 90
+ UNITS DD
+ SHAPEPATH "../data"
+ IMAGECOLOR 255 255 255
+ #FONTSET "../../etc/fonts.txt"
+END #Map file
+\end{lstlisting}
+\item Setelah itu kita masukan script untuk konfigurasi web interfacenya sebelum syntax END, didalam script ini berisi konfigurasi untuk web interface berupa tempat gambar serta metadata yang mendefinisakan informasi dalam tampilan antarmuka web.
 
+\begin{lstlisting}
+ WEB
+   IMAGEPATH "ms4w/tmp/ms_tmp/"
+   IMAGEURL "/ms_tmp/"
+   METADATA
+     "wfs_title"                 "WFS Demo Server for MapServer" ## REQUIRED
+     "wfs_onlineresource" "http://localhost:8080/cgi-bin/mapserv.exe?map=C:/ms4w/apps/indo/map/mywfs.map" ## Recommended      
+     "wfs_srs"                    "EPSG:4326 EPSG:4269 EPSG:3978 EPSG:3857" ## Recommended
+     "wfs_abstract"            "This text describes my WFS service." ## Recom
+     "wfs_enable_request" "*"  # necessary
+   END
+ END
+\end{lstlisting}
+\end{enumerate}
