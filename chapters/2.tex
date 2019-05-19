@@ -74,3 +74,22 @@ Kegunaan Data Vektor Spatial Data Types adalah untuk menganalisa yang membutuhka
 
 \end{enumerate}
 
+
+\section{MEMBACA DATA VECTOR}
+Data vector merupakan tipe data yang umum ditemukaaan dalam system informasi geografis. Sebuah vector pada inti merupakan sesuatu yang berbentuk sebuah titik, garis yang menghubungkan titik-titik tersebut.
+Berikut langkah-langkah membaca data vector :
+\begin{enumerate}
+\item 1.py, buat script python berikut
+\begin{lstlisting}
+ import shapefile         
+w=shapefile.Writer()
+w.shapeType                 	
+w.field("kolom1","C")
+w.field("kolom2","C")
+w.record("lidwina","satu")
+w.record("riki","dua")
+w.point(1,1)                  	  
+w.point(2,2)
+w.save("soal1")
+\end{lstlisting}
+\end{enumerate}
